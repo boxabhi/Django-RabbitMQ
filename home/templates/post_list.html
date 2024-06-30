@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post List</title>
+</head>
+<body>
+    <h1>Post List</h1>
+    {% for post in posts %}
+        <div>
+            <p>{{ post.content }}</p>
+            <a href="{% url 'like_post' post.id %}">Like</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
